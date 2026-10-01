@@ -1,0 +1,58 @@
+import type { TimeLayer } from '@/types';
+
+export const timeLayers: TimeLayer[] = [
+  {
+    year: 1900,
+    label: '1900',
+    urbanCoverage: 5,
+    vegetationCoverage: 78,
+    waterCoverage: 12,
+    population: '45K',
+    description: 'Predominantly forested landscape with scattered villages and agricultural clearings.',
+  },
+  {
+    year: 1950,
+    label: '1950',
+    urbanCoverage: 12,
+    vegetationCoverage: 68,
+    waterCoverage: 11,
+    population: '180K',
+    description: 'Early industrial development begins, first coal mining operations established.',
+  },
+  {
+    year: 1980,
+    label: '1980',
+    urbanCoverage: 28,
+    vegetationCoverage: 52,
+    waterCoverage: 10,
+    population: '750K',
+    description: 'Rapid industrialization, mining expansion, and urban growth accelerate.',
+  },
+  {
+    year: 2000,
+    label: '2000',
+    urbanCoverage: 45,
+    vegetationCoverage: 38,
+    waterCoverage: 9,
+    population: '1.4M',
+    description: 'Extensive mining areas, significant deforestation, dense urban corridors.',
+  },
+  {
+    year: 2020,
+    label: '2020',
+    urbanCoverage: 62,
+    vegetationCoverage: 25,
+    waterCoverage: 8,
+    population: '2.3M',
+    description: 'Highly urbanized region with fragmented green spaces and degraded water bodies.',
+  },
+  {
+    year: 2026,
+    label: 'Present',
+    urbanCoverage: 68,
+    vegetationCoverage: 22,
+    waterCoverage: 7,
+    population: '2.68M',
+    description: 'Dense urban grid, minimal natural cover, critical environmental pressure.',
+  },
+];
