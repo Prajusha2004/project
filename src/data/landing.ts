@@ -31,3 +31,11 @@ export const STACK = [
   { icon: Cpu, label: 'Simulation' },
   { icon: Database, label: 'Interactive Exploration' },
 ];
+
+export const ARCHITECTURE_POINTS = [
+  { icon: Layers, title: 'Separation of Concerns', desc: 'Mock data lives in a dedicated layer, ready to be swapped for API calls.' },
+  { icon: Cpu, title: 'Component Architecture', desc: 'Reusable components designed for real-time data binding.' },
+  { icon: Satellite, title: 'GIS-Ready', desc: 'Structured to accept PostGIS queries and real geographic datasets.' },
+];
+
+export const PIPELINE_STEPS = ['React UI', 'REST API', 'Spring Boot', 'PostgreSQL / PostGIS', 'Geographic Datasets'];

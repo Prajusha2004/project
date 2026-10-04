@@ -1,4 +1,6 @@
 // SVG Radar Chart — lightweight, no external dependency
+import { BRAND_CYAN } from '@/data/constants';
+
 interface RadarChartProps {
   data: { label: string; value: number }[]; // value: 0-100
   size?: number;
@@ -6,7 +8,7 @@ interface RadarChartProps {
   fillColor?: string;
 }
 
-export function RadarChart({ data, size = 280, color = '#22d3ee', fillColor = 'rgba(34,211,238,0.12)' }: RadarChartProps) {
+export function RadarChart({ data, size = 280, color = BRAND_CYAN, fillColor = 'rgba(34,211,238,0.12)' }: RadarChartProps) {
   const cx = size / 2;
   const cy = size / 2;
   const radius = size / 2 - 38;

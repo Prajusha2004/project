@@ -1,5 +1,6 @@
 import { MapPlaceholder } from '@/components/ui/MapPlaceholder';
-import { MapControls, MapToolbar } from '@/components/layout/MapControls';
+import { MapControls} from '@/components/layout/MapControls';
+import { MapToolbar } from '@/components/layout/MapToolbar';
 import { StatCard } from '@/components/ui/Cards';
 import { dashboardCards } from '@/data/dashboard';
 import { Activity, TrendingUp, AlertTriangle } from 'lucide-react';

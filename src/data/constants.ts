@@ -8,3 +8,4 @@ export const DEFAULT_LOCATION = {
 export function formatCoordinates(lat: number, lng: number): string {
   return `${lat.toFixed(4)}°N, ${lng.toFixed(4)}°E`;
 }
+export const BRAND_CYAN = '#22d3ee';

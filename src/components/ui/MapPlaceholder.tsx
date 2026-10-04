@@ -3,7 +3,8 @@
 // requiring actual map tiles. Later this can be replaced with a real
 // MapLibre/PostGIS-backed component.
 import { useMemo, useState } from 'react';
-import { DEFAULT_LOCATION } from '@/data/constants';
+import { DEFAULT_LOCATION, BRAND_CYAN } from '@/data/constants';
+
 interface MapMarker {
   x: number; // 0-100 %
   y: number; // 0-100 %
@@ -136,12 +137,12 @@ export function MapPlaceholder({
         {markers.map((m, i) => (
           <g key={i}>
             {m.pulse && (
-              <circle cx={m.x} cy={m.y} r="1.5" fill="none" stroke={m.color ?? '#22d3ee'} strokeWidth="0.2">
+              <circle cx={m.x} cy={m.y} r="1.5" fill="none" stroke={m.color ?? BRAND_CYAN} strokeWidth="0.2">
                 <animate attributeName="r" from="1.5" to="4" dur="2s" repeatCount="indefinite" />
                 <animate attributeName="opacity" from="0.6" to="0" dur="2s" repeatCount="indefinite" />
               </circle>
             )}
-            <circle cx={m.x} cy={m.y} r="0.8" fill={m.color ?? '#22d3ee'} />
+            <circle cx={m.x} cy={m.y} r="0.8" fill={m.color ?? BRAND_CYAN} />
             {m.label && (
               <text x={m.x + 1.5} y={m.y + 0.5} fill="#94a3b8" style={{ fontSize: 1.5 }}>
                 {m.label}

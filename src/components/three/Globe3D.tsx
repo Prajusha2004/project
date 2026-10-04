@@ -2,7 +2,7 @@ import { useRef, useMemo } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 import { DEFAULT_LOCATION } from '@/data/constants';
-
+import { BRAND_CYAN } from '@/data/constants';
 // Globe markers — geographic coordinates converted to 3D positions
 const MARKERS = [
   { lat: DEFAULT_LOCATION.lat, lng: DEFAULT_LOCATION.lng, label: DEFAULT_LOCATION.name },
@@ -74,23 +74,22 @@ function GlobeMesh() {
       {/* Latitude grid */}
       {latLines.map((geo, i) => (
         <lineSegments key={`lat-${i}`} geometry={geo}>
-          <lineBasicMaterial color="#22d3ee" transparent opacity={0.15} />
+          <lineBasicMaterial color={BRAND_CYAN} transparent opacity={0.15} />
         </lineSegments>
       ))}
 
       {/* Longitude grid */}
       {lngLines.map((geo, i) => (
         <lineSegments key={`lng-${i}`} geometry={geo}>
-          <lineBasicMaterial color="#22d3ee" transparent opacity={0.15} />
+          <lineBasicMaterial color={BRAND_CYAN} transparent opacity={0.15} />
         </lineSegments>
       ))}
 
       {/* Equator — brighter */}
       <mesh>
         <torusGeometry args={[1, 0.003, 8, 128]} />
-        <meshBasicMaterial color="#22d3ee" transparent opacity={0.3} />
+        <meshBasicMaterial color={BRAND_CYAN} transparent opacity={0.3} />
       </mesh>
-
       {/* Markers */}
       {MARKERS.map((m, i) => {
         const pos = latLngToVector3(m.lat, m.lng, 1.01);
@@ -98,12 +97,12 @@ function GlobeMesh() {
           <group key={i} position={[pos.x, pos.y, pos.z]}>
             <mesh>
               <sphereGeometry args={[0.018, 12, 12]} />
-              <meshBasicMaterial color="#22d3ee" />
+              <meshBasicMaterial color={BRAND_CYAN} />
             </mesh>
             {/* Glow ring */}
             <mesh>
               <ringGeometry args={[0.025, 0.04, 24]} />
-              <meshBasicMaterial color="#22d3ee" transparent opacity={0.4} side={THREE.DoubleSide} />
+             <meshBasicMaterial color={BRAND_CYAN} transparent opacity={0.4} side={THREE.DoubleSide} />
             </mesh>
           </group>
         );
@@ -112,7 +111,7 @@ function GlobeMesh() {
       {/* Atmosphere glow */}
       <mesh scale={1.06}>
         <sphereGeometry args={[1, 32, 32]} />
-        <meshBasicMaterial color="#22d3ee" transparent opacity={0.04} side={THREE.BackSide} />
+         <meshBasicMaterial color={BRAND_CYAN} transparent opacity={0.04} side={THREE.BackSide} />
       </mesh>
     </group>
   );

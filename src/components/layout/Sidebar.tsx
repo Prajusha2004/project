@@ -1,7 +1,7 @@
 import { getIcon } from '@/lib/icons';
 import { navItems, navSections } from '@/data/navigation';
 import type { PageId } from '@/types';
-
+import { GlobeIcon } from '@/components/ui/GlobeIcon';
 interface SidebarProps {
   activePage: PageId;
   onNavigate: (page: PageId) => void;
@@ -13,7 +13,7 @@ export function Sidebar({ activePage, onNavigate }: SidebarProps) {
       {/* Logo */}
       <div className="h-14 flex items-center gap-2.5 px-5 border-b border-border-subtle">
         <div className="w-8 h-8 rounded-lg bg-accent-cyan/10 border border-accent-cyan/30 flex items-center justify-center">
-          <GlobeLogo />
+          <GlobeIcon />
         </div>
         <span className="text-sm font-bold tracking-wider">GEOSPHERE</span>
       </div>
@@ -60,16 +60,5 @@ export function Sidebar({ activePage, onNavigate }: SidebarProps) {
         </div>
       </div>
     </aside>
-  );
-}
-
-function GlobeLogo() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-      <circle cx="12" cy="12" r="10" stroke="#22d3ee" strokeWidth="1.5" />
-      <ellipse cx="12" cy="12" rx="10" ry="4" stroke="#22d3ee" strokeWidth="1" opacity="0.5" />
-      <ellipse cx="12" cy="12" rx="4" ry="10" stroke="#22d3ee" strokeWidth="1" opacity="0.5" />
-      <circle cx="12" cy="12" r="1.5" fill="#22d3ee" />
-    </svg>
   );
 }
